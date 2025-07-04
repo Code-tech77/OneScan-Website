@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneScan Blog Post</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar apple-nav">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/Logo.jpeg" alt="OneScan Logo" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#details">Details</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+                <li><a href="why.html">Why?</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="index.html#download">Download</a></li>
+            </ul>
+            <button class="mobile-menu-button" aria-label="Open Menu" aria-expanded="false">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </button>
+        </div>
+    </nav>
+    <main>
+        <section class="blog-hero">
+            <div class="container">
+                <h1 class="blog-hero-title" id="post-title">Loading...</h1>
+                <div class="blog-post-meta" id="post-meta"></div>
+                <div class="blog-hero-desc" id="post-summary"></div>
+            </div>
+        </section>
+        <section class="blog-post-content-section">
+            <div class="container blog-post-container">
+                <div class="blog-post-card apple-card">
+                    <div class="blog-post-img-wrap">
+                        <img id="post-img" class="blog-modal-img" src="" alt="Blog Post Image">
+                    </div>
+                    <div class="blog-post-content" id="post-content">
+                        <!-- Blog content will be injected here -->
+                    </div>
+                </div>
+                <div class="blog-post-actions">
+                    <a href="blog.html" class="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+                    <div class="blog-share">
+                        <span>Share:</span>
+                        <button class="share-btn" id="copy-link-btn" title="Copy link"><i class="fas fa-link"></i></button>
+                    </div>
+                </div>
+                <div class="related-posts-section">
+                    <h3>Related Posts</h3>
+                    <div class="related-posts" id="related-posts"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer apple-footer">
+        <div class="container footer-container">
+            <div class="footer-logo">OneScan</div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.tiktok.com/@onescanapp"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/onescan.app/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/onescan-app"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 OneScan. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="blog-post.js"></script>
+</body>
+</html> 

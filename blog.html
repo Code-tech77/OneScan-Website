@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneScan Blog - Secure QR Code Insights</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar apple-nav">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/Logo.jpeg" alt="OneScan Logo" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#details">Details</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+                <li><a href="why.html">Why?</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="index.html#download">Download</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-button" aria-label="Open Menu" aria-expanded="false">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="blog-hero apple-section">
+            <div class="container">
+                <h1 class="blog-hero-title">OneScan Insights</h1>
+                <p class="blog-hero-desc">Your source for the latest in QR code security, privacy, and technology. Dive into deep-dive articles from the OneScan team.</p>
+            </div>
+        </section>
+
+        <section class="blog-list apple-section">
+            <div class="container blog-list-container">
+                <h2 class="section-title">QR Code Security Short Blogs </h2>
+                <div class="blog-grid">
+                    <!-- Blog cards will be injected by JS for full functionality -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Blog Modal -->
+    <div id="blog-modal" class="timeline-modal" style="display:none;">
+        <div class="timeline-modal-backdrop"></div>
+        <div class="timeline-modal-content apple-card blog-modal-content">
+            <button class="timeline-modal-close" aria-label="Close">&times;</button>
+            <div class="timeline-modal-img-wrap blog-modal-img-wrap">
+                <img src="" alt="Blog Image" class="timeline-modal-img blog-modal-img">
+            </div>
+            <div class="timeline-modal-info blog-modal-info">
+                <h3 class="timeline-modal-title blog-modal-title"></h3>
+                <div class="timeline-modal-desc blog-modal-desc"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer apple-footer">
+        <div class="container footer-container">
+            <div class="footer-logo">OneScan</div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.tiktok.com/@onescanapp"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/onescan.app/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/onescan-app"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 OneScan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="blog.js"></script>
+</body>
+</html> 
