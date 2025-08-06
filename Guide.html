@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Guide - OneScan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: var(--dark-bg);
+        }
+        .guide-hero {
+            padding-top: 110px;
+            padding-bottom: 40px;
+        }
+        .guide-hero-content {
+            max-width: 700px;
+            margin: 0 auto 2.5rem auto;
+            background: var(--card-bg);
+            border-radius: 24px;
+            box-shadow: 0 4px 32px rgba(222,210,38,0.08);
+            padding: 2.5rem 2rem 2rem 2rem;
+            text-align: center;
+        }
+        .guide-hero-content h1 {
+            margin-bottom: 0.7rem;
+        }
+        .guide-hero-content p {
+            color: #e0e0e0;
+            font-size: 1.15rem;
+        }
+        .guide-section {
+            padding-bottom: 60px;
+        }
+        .guide-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .guide-main-card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            box-shadow: 0 4px 32px rgba(222,210,38,0.08);
+            padding: 2.5rem 2rem 2rem 2rem;
+        }
+        .guide-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
+        }
+        .guide-step {
+            position: relative;
+            overflow: visible;
+            margin: 0 auto;
+            max-width: 600px;
+            padding-bottom: 0.5rem;
+        }
+        .guide-step .step-number {
+            position: absolute;
+            top: -34px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--secondary-color);
+            color: #222;
+            font-size: 2.3rem;
+            font-weight: 900;
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 16px rgba(222,210,38,0.18);
+            z-index: 2;
+            border: 4px solid #fff2;
+            margin-bottom: 18px;
+        }
+        .guide-step .section-title {
+            margin-top: 48px;
+        }
+        .guide-step .step-icon {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
+        .guide-step .img-frame {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(120deg, #232323 60%, var(--primary-color) 100%);
+            border-radius: 20px;
+            box-shadow: 0 2px 18px rgba(222,210,38,0.08), 0 1.5px 8px rgba(0,0,0,0.10);
+            padding: 1.2rem;
+            margin: 1.2rem auto 1.2rem auto;
+            max-width: 320px;
+        }
+        .guide-step img {
+            max-width: 220px;
+            width: 100%;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+            border: 2px solid var(--secondary-color);
+            background: #fff;
+        }
+        .guide-step .divider {
+            width: 60px;
+            height: 4px;
+            background: var(--secondary-color);
+            border-radius: 2px;
+            margin: 1.2rem auto 1.5rem auto;
+        }
+        .guide-step p {
+            font-size: 1.13rem;
+            line-height: 1.8;
+            color: #f3f3f3;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        .guide-step .extra-info {
+            color: #ded226;
+            font-size: 1rem;
+            margin-top: 0.7rem;
+            background: rgba(222,210,38,0.10);
+            border-radius: 10px;
+            padding: 0.8rem 1.2rem;
+            display: inline-block;
+            text-align: center;
+        }
+        @media (max-width: 900px) {
+            .guide-main-card, .guide-hero-content {
+                padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+            }
+            .guide-main-card {
+                border-radius: 16px;
+            }
+            .guide-hero-content {
+                border-radius: 16px;
+            }
+        }
+        @media (max-width: 700px) {
+            .guide-main-card {
+                padding: 0.7rem 0.1rem 0.7rem 0.1rem;
+            }
+            .guide-hero-content {
+                padding: 1rem 0.2rem 1rem 0.2rem;
+            }
+            .guide-step {
+                max-width: 100vw;
+                padding-left: 0.2rem;
+                padding-right: 0.2rem;
+            }
+            .guide-step .step-number {
+                width: 38px;
+                height: 38px;
+                font-size: 1.1rem;
+                top: -16px;
+                margin-bottom: 10px;
+            }
+            .guide-step .section-title {
+                margin-top: 32px;
+                font-size: 1.18rem !important;
+            }
+            .guide-step .img-frame {
+                padding: 0.5rem;
+                max-width: 98vw;
+            }
+            .guide-step img {
+                max-width: 180px;
+                min-width: 120px;
+                width: 100%;
+            }
+            .guide-step p, .guide-step .extra-info {
+                font-size: 1.08rem;
+                line-height: 1.9;
+            }
+        }
+        @media (max-width: 480px) {
+            .guide-main-card, .guide-hero-content {
+                padding: 0.3rem 0.05rem 0.3rem 0.05rem;
+                border-radius: 8px;
+            }
+            .guide-step {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .guide-step .img-frame {
+                padding: 0.2rem;
+            }
+            .guide-step img {
+                max-width: 120px;
+                min-width: 90px;
+                width: 100%;
+            }
+            .guide-step .section-title {
+                margin-top: 18px;
+                font-size: 1.05rem !important;
+            }
+            .guide-step .step-number {
+                width: 28px;
+                height: 28px;
+                font-size: 0.9rem;
+                top: -10px;
+            }
+            .guide-step p, .guide-step .extra-info {
+                font-size: 1.01rem;
+                line-height: 2.05;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar apple-nav">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/Logo.jpeg" alt="OneScan Logo" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#details">Details</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+                <li><a href="why.html">Why?</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#download">Download</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-button" aria-label="Open Menu" aria-expanded="false">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </button>
+        </div>
+    </nav>
+    <main>
+        <section class="guide-hero apple-section">
+            <div class="container">
+                <div class="guide-hero-content apple-card">
+                    <h1 class="section-title"><i class="fas fa-book-open"></i> User Guide</h1>
+                    <p class="hero-desc">Get started with OneScan in just a few easy steps. Enjoy a seamless, secure, and modern QR code experience!</p>
+                </div>
+            </div>
+        </section>
+        <section class="guide-section apple-section">
+            <div class="container guide-container">
+                <div class="guide-main-card apple-card">
+                    <div class="guide-steps">
+                        <!-- Step 1 -->
+                        <div class="guide-step">
+                            <div class="step-number">1</div>
+                            <h2 class="section-title" style="font-size:1.5rem;"><span class="step-icon"><i class="fas fa-link"></i></span>Enter Your URL</h2>
+                            <div class="divider"></div>
+                            <div class="img-frame">
+                                <img src="images/screen1.png" alt="Enter HTTPS URL">
+                            </div>
+                            <p><strong>Your URL must start with <span style="color:var(--secondary-color);">HTTPS</span>, not HTTP.</strong></p>
+                            <p>For your security, OneScan only accepts links that begin with <b>https://</b>. This ensures your data is always encrypted and protected from the start.</p>
+                            <p>Any link that does not use HTTPS will be rejected by the app. This is a key part of our commitment to your privacy and safety.</p>
+                            <div class="extra-info"><i class="fas fa-shield-alt"></i> <b>Tip:</b> Always double-check your link for typos and make sure it is a valid, secure website address.</div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="guide-step">
+                            <div class="step-number">2</div>
+                            <h2 class="section-title" style="font-size:1.5rem;"><span class="step-icon"><i class="fas fa-qrcode"></i></span>Get Your QR Code</h2>
+                            <div class="divider"></div>
+                            <div class="img-frame">
+                                <img src="images/screen2.png" alt="Get QR Code">
+                            </div>
+                            <p>Once you have entered a valid HTTPS link, simply click the <b style="color:var(--secondary-color);">Generate QR Code</b> button below the input box.</p>
+                            <p>OneScan will instantly check your link and, if valid, create a unique, one-time QR code just for you.</p>
+                            <p>This step is fast and secure your QR code is never reused and is always protected.</p>
+                            <div class="extra-info"><i class="fas fa-info-circle"></i> <b>Note:</b> If your link is not valid or not HTTPS, you will see a warning and no QR code will be generated.</div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="guide-step">
+                            <div class="step-number">3</div>
+                            <h2 class="section-title" style="font-size:1.5rem;"><span class="step-icon"><i class="fas fa-eye"></i></span>View & Save Your Secure QR Code</h2>
+                            <div class="divider"></div>
+                            <div class="img-frame">
+                                <img src="images/screen3.png" alt="View QR Code">
+                            </div>
+                            <p>After generating, your <b>one-time, secure QR code</b> will appear on the screen.</p>
+                            <p>This code can only be scanned once, making it perfect for sharing sensitive links or information safely.</p>
+                            <p>To keep your QR code, tap the <b style="color:var(--secondary-color);">Save in Gallery</b> button. This will store the QR code image directly to your device's photo gallery for easy access.</p>
+                            <div class="extra-info"><i class="fas fa-user-lock"></i> <b>Security:</b> Only share your QR code with trusted people. After one scan, it becomes invalid for everyone else!</div>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="guide-step">
+                            <div class="step-number">4</div>
+                            <h2 class="section-title" style="font-size:1.5rem;"><span class="step-icon"><i class="fas fa-image"></i></span>Find Your QR Code in Gallery</h2>
+                            <div class="divider"></div>
+                            <div class="img-frame">
+                                <img src="images/screen4.png" alt="QR Code in Gallery">
+                            </div>
+                            <p>Open your device's photo gallery. You will see your newly saved QR code image, ready to use or share at any time.</p>
+                            <p>This makes it easy to retrieve your code whenever you need it, even offline.</p>
+                            <p>With OneScan, your QR code is always just a tap away secure, private, and under your control.</p>
+                            <div class="extra-info"><i class="fas fa-trophy"></i> <b>Congratulations!</b> You have successfully generated and saved a one-time, secure QR code with OneScan. Enjoy peace of mind and effortless sharing!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer apple-footer">
+        <div class="container footer-container">
+            <div class="footer-logo">OneScan</div>
+            <div class="footer-links">
+                <a href="Privacy.html">Privacy Policy</a>
+                <a href="Guide.html">User Guide</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.tiktok.com/@onescanapp"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/onescan.app/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/onescan-app"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 OneScan. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
