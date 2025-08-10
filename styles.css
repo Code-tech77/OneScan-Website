@@ -1183,7 +1183,7 @@ body::-webkit-scrollbar-thumb {
 }
 .timeline-modal-desc {
     font-size: 1.15rem;
-    color: var(--subtle-text);
+    color: white;
     line-height: 1.7;
     font-weight: 500;
     margin-bottom: 0.5rem;
@@ -2697,6 +2697,40 @@ body::-webkit-scrollbar-thumb {
     letter-spacing: 0.01em;
     text-shadow: 0 2px 12px rgba(222,210,38,0.07);
     transition: color 0.3s;
+}
+
+.know-more-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 0.8rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+    position: relative;
+    text-shadow: 0 2px 12px rgba(222,210,38,0.15);
+}
+
+.know-more-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: var(--secondary-color);
+    transition: width 0.3s ease;
+    box-shadow: 0 2px 8px rgba(222,210,38,0.3);
+}
+
+.know-more-link:hover {
+    color: #fffbe6;
+    transform: translateY(-1px);
+    text-shadow: 0 4px 16px rgba(222,210,38,0.25);
+}
+
+.know-more-link:hover::after {
+    width: 100%;
 }
 .why-cta-badge.minimal {
     color: var(--primary-color);
